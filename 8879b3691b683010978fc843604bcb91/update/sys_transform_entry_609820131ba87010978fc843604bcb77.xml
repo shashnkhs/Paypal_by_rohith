@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Bulk TM">b848acdf1b687010978fc843604bcb1b</map>
+        <reference_value_field/>
+        <source_field>u_date_of_join</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>x_26525_hospital_bulk_details</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-10 01:20:49</sys_created_on>
+        <sys_id>609820131ba87010978fc843604bcb77</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_date_of_join</sys_name>
+        <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
+        <sys_update_name>sys_transform_entry_609820131ba87010978fc843604bcb77</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-10 01:20:49</sys_updated_on>
+        <target_field>date_of_join</target_field>
+        <target_table>x_26525_hospital_patient_record</target_table>
+        <use_source_script>false</use_source_script>
+    </sys_transform_entry>
+</record_update>

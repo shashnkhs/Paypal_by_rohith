@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <conditions table="x_26525_hospital_patient_record">state=2^EQ<item display_value="In Progress" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="2"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
@@ -28,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>703025521b28b010978fc843604bcbfb</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Make Readonly</sys_name>
         <sys_overrides/>
         <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
@@ -36,7 +36,7 @@
         <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
         <sys_update_name>sys_ui_policy_703025521b28b010978fc843604bcbfb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-06-09 04:17:20</sys_updated_on>
+        <sys_updated_on>2021-06-10 16:07:24</sys_updated_on>
         <table>x_26525_hospital_patient_record</table>
         <ui_type>0</ui_type>
         <view/>

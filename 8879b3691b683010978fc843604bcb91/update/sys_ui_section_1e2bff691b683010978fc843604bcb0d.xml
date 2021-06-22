@@ -1,72 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="1e2bff691b683010978fc843604bcb0d" sys_domain="global" table="x_26525_hospital_patient_record" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number</element>
+            <element>process_flow.xml</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-05 15:10:56</sys_created_on>
-            <sys_id>6f96b5fd1bec3010978fc843604bcbfd</sys_id>
+            <sys_created_on>2021-06-21 02:43:22</sys_created_on>
+            <sys_id>b0f4a97a1b38b010978fc843604bcb44</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Hospital Managment">cc24293a1b38b010978fc843604bcb4b</sys_ui_formatter>
+            <sys_ui_section caption="NULL" display_value="" name="x_26525_hospital_patient_record" sys_domain="global" view="Default view">1e2bff691b683010978fc843604bcb0d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-21 02:43:22</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-21 02:43:22</sys_created_on>
+            <sys_id>3cf4a97a1b38b010978fc843604bcb44</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26525_hospital_patient_record" sys_domain="global" view="Default view">1e2bff691b683010978fc843604bcb0d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-05 15:10:56</sys_updated_on>
+            <sys_updated_on>2021-06-21 02:43:22</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-21 02:43:22</sys_created_on>
+            <sys_id>b0f4a97a1b38b010978fc843604bcb45</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26525_hospital_patient_record" sys_domain="global" view="Default view">1e2bff691b683010978fc843604bcb0d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-21 02:43:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
-            <position>1</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-05 15:10:56</sys_created_on>
-            <sys_id>e396b5fd1bec3010978fc843604bcbfe</sys_id>
+            <sys_created_on>2021-06-21 02:43:22</sys_created_on>
+            <sys_id>38f4a97a1b38b010978fc843604bcb45</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26525_hospital_patient_record" sys_domain="global" view="Default view">1e2bff691b683010978fc843604bcb0d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-05 15:10:56</sys_updated_on>
+            <sys_updated_on>2021-06-21 02:43:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>2</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-05 15:10:56</sys_created_on>
-            <sys_id>6796b5fd1bec3010978fc843604bcbfe</sys_id>
+            <sys_created_on>2021-06-21 02:43:22</sys_created_on>
+            <sys_id>bcf4a97a1b38b010978fc843604bcb45</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26525_hospital_patient_record" sys_domain="global" view="Default view">1e2bff691b683010978fc843604bcb0d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-05 15:10:56</sys_updated_on>
+            <sys_updated_on>2021-06-21 02:43:22</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>state</element>
-            <position>3</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-05 15:10:56</sys_created_on>
-            <sys_id>e796b5fd1bec3010978fc843604bcbfe</sys_id>
+            <sys_created_on>2021-06-21 02:43:22</sys_created_on>
+            <sys_id>34f4a97a1b38b010978fc843604bcb46</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26525_hospital_patient_record" sys_domain="global" view="Default view">1e2bff691b683010978fc843604bcb0d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-05 15:10:56</sys_updated_on>
+            <sys_updated_on>2021-06-21 02:43:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>date_of_join</element>
-            <position>4</position>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-05 15:10:56</sys_created_on>
-            <sys_id>6b96b5fd1bec3010978fc843604bcbfe</sys_id>
+            <sys_created_on>2021-06-21 02:43:22</sys_created_on>
+            <sys_id>b8f4a97a1b38b010978fc843604bcb46</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26525_hospital_patient_record" sys_domain="global" view="Default view">1e2bff691b683010978fc843604bcb0d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-05 15:10:56</sys_updated_on>
+            <sys_updated_on>2021-06-21 02:43:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

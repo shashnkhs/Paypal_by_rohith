@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_26525_hospital_patient_record">state=1^EQ<item display_value="New" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <label>New</label>
+        <name>New</name>
+        <order>100</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-21 02:41:05</sys_created_on>
+        <sys_id>2c54617a1b38b010978fc843604bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New</sys_name>
+        <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
+        <sys_update_name>sys_process_flow_2c54617a1b38b010978fc843604bcb9e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-21 02:41:05</sys_updated_on>
+        <table>x_26525_hospital_patient_record</table>
+    </sys_process_flow>
+</record_update>

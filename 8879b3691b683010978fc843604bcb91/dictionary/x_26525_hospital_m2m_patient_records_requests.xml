@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Hospital M2m Patient Records Requests" max_length="40" name="x_26525_hospital_m2m_patient_records_requests" sizeclass="0" type="collection">
+        <element attributes="encode_utf8=false" label="Patient Record" max_length="32" name="patient_record" reference="x_26525_hospital_patient_record" type="reference"/>
+        <element attributes="encode_utf8=false" label="Request" max_length="32" name="request" reference="sc_request" type="reference"/>
+        <index name="index">
+            <element name="request"/>
+        </index>
+        <index name="index2">
+            <element name="patient_record"/>
+        </index>
+    </element>
+</database>

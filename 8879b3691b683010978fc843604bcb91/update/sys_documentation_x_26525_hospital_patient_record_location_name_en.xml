@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="location_name" label="Location Name" language="en" table="x_26525_hospital_patient_record">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>location_name</element>
+            <help/>
+            <hint/>
+            <label>Location Name</label>
+            <language>en</language>
+            <name>x_26525_hospital_patient_record</name>
+            <plural>Location Names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-10 14:38:17</sys_created_on>
+            <sys_id>5a1fdf531be0b010978fc843604bcb4e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Location Name</sys_name>
+            <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
+            <sys_update_name>sys_documentation_x_26525_hospital_patient_record_location_name_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-10 14:38:17</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_relationship">
+    <sys_relationship action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>x_26525_hospital_patient_record</basic_apply_to>
+        <basic_query_from>sysapproval_approver</basic_query_from>
+        <insert_callback/>
+        <name>Approvals</name>
+        <query_from/>
+        <query_with><![CDATA[(function refineQuery(current, parent) {
+
+	// Add your code here, such as current.addQuery(field, value);
+	current.addQuery('document_id',parent.sys_id);
+
+})(current, parent);]]></query_with>
+        <reference_field>sysapproval</reference_field>
+        <related_list/>
+        <simple_reference>false</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-10 13:44:59</sys_created_on>
+        <sys_id>43525b971ba0b010978fc843604bcb6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Approvals</sys_name>
+        <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
+        <sys_update_name>sys_relationship_43525b971ba0b010978fc843604bcb6c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-10 13:44:59</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="delete_multiple" query="documentkey=43525b971ba0b010978fc843604bcb6c"/>
+</record_update>
