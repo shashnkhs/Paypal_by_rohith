@@ -20,13 +20,14 @@ PaypalAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             var message = ex.message;
         }
     },
-    makePayment: function(token, item_desc, invoice, total) {
+    makePayment: function(token, item_desc, invoice, total, record_number) {
         try {
             var r = new sn_ws.RESTMessageV2('x_26525_hospital.Paypal', 'MakePayment');
             r.setStringParameterNoEscape('token', token);
             r.setStringParameterNoEscape('item_desc', item_desc);
             r.setStringParameterNoEscape('invoice', invoice);
             r.setStringParameterNoEscape('total', total);
+            r.setStringParameterNoEscape('record_number', record_number);
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
@@ -35,19 +36,63 @@ PaypalAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             var message = ex.message;
         }
     },
+    processPayment: function(item_desc, invoice, total) {
+        item_desc = this.getParameter('sysparm_item_desc');
+        invoice = this.getParameter('sysparm_invoice');
+        total = this.getParameter('sysparm_total');
+        var number = this.getParameter('sysparm_number');
+
+        var token = this.getToken();
+        if (token[0] == '200') {
+            var payObj = this.makePayment(token[1], item_desc, invoice, total, number);
+            return JSON.stringify(payObj[1]);
+        } else
+            return ['400', 'Fail'];
+    },
+    acceptPayment: function() {
+		var token = this.getToken();
+		var payment_id = this.getParameter('sysparm_payment_id');
+        var payer_id = this.getParameter('sysparm_payer_id');
+		var number = this.getParameter('sysparm_number');
+        if (token[0] == '200') {
+        try {
+            var r = new sn_ws.RESTMessageV2('x_26525_hospital.Paypal', 'AcceptPayment');
+            r.setStringParameterNoEscape('token', token[1]);
+            r.setStringParameterNoEscape('payment_id', payment_id);
+            r.setStringParameterNoEscape('payer_id', payer_id);
+            var response = r.execute();
+            var responseBody = response.getBody();
+			gs.info('Accept '+JSON.stringify(responseBody));
+            var httpStatus = response.getStatusCode();
+			if(httpStatus == 200 || httpStatus == '200'){
+				var gr= new GlideRecord('x_26525_hospital_patient_record');
+				gr.addQuery('number',number);
+				gr.query();
+				if(gr.next()){
+					gr.payment_status= true;
+					gr.payment_reference=JSON.parse(responseBody).id;
+					gr.update();
+					return "https://dev110521.service-now.com/nav_to.do?uri=x_26525_hospital_patient_record.do?sys_id="+gr.sys_id;
+				}
+			}
+        } catch (ex) {
+            var message = ex.message;
+        }
+		}
+    },
     type: 'PaypalAPI'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-06-22 02:38:43</sys_created_on>
         <sys_id>a36da2471bf4f010978fc843604bcb3a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>PaypalAPI</sys_name>
         <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
         <sys_update_name>sys_script_include_a36da2471bf4f010978fc843604bcb3a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-06-22 02:57:50</sys_updated_on>
+        <sys_updated_on>2021-06-22 16:05:16</sys_updated_on>
     </sys_script_include>
 </record_update>

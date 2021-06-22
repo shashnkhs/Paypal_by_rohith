@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var number = gel('number').value;
+var paymentId = gel('paymentId').value;
+var PayerID = gel('PayerID').value;
+   var ga = new GlideAjax('x_26525_hospital.PaypalAPI');
+    ga.addParam('sysparm_name', 'acceptPayment');
+    ga.addParam('sysparm_payment_id', paymentId);
+    ga.addParam('sysparm_payer_id', PayerID);
+    ga.addParam('sysparm_number', number);
+    ga.getXML(myCallBack);
+function myCallBack(response) {
+    var resp = response.responseXML.documentElement.getAttribute('answer');
+	top.window.location.href=resp;
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_26525_hospital_paypal_success_payment.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:evaluate var="jvar_number" expression="RP.getParameterValue('sysparam_number')"/>
+	<input type="text" id="number" value="${jvar_number}" readonly="true"/>
+	
+	<g:evaluate var="jvar_paymentId" expression="RP.getParameterValue('paymentId')"/>
+	<input type="text" id="paymentId" value="${jvar_paymentId}" readonly="true"/>
+	
+	<g:evaluate var="jvar_PayerID" expression="RP.getParameterValue('PayerID')"/>
+	<input type="text" id="PayerID" value="${jvar_PayerID}" readonly="true"/>
+	<h3>Payment Inprogress! Please do not close payment is yet to confirm </h3>
+	 <img src="inprogress.gif" width="300" height="300" style="margin-left: 40%;"/>
+</j:jelly>]]></html>
+        <name>paypal_success_payment</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-22 14:20:41</sys_created_on>
+        <sys_id>d41e055b1b303410978fc843604bcbef</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>paypal_success_payment</sys_name>
+        <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
+        <sys_update_name>sys_ui_page_d41e055b1b303410978fc843604bcbef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-22 15:52:24</sys_updated_on>
+    </sys_ui_page>
+</record_update>

@@ -36,7 +36,7 @@
     }&#13;
   }],&#13;
   "redirect_urls": {&#13;
-    "return_url": "https://dev110521.service-now.com/nav_to.do?uri=/ui_page.do?sys_id=bff113b21bbcb010978fc843604bcb23",&#13;
+    "return_url": "https://dev110521.service-now.com/x_26525_hospital_paypal_success_payment.do?sysparam_number=${record_number}",&#13;
     "cancel_url": "https://example.com"&#13;
   }&#13;
 }</content>
@@ -52,14 +52,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-06-21 15:13:19</sys_created_on>
         <sys_id>035014831b70f010978fc843604bcbba</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>MakePayment</sys_name>
         <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
         <sys_update_name>sys_rest_message_fn_035014831b70f010978fc843604bcbba</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-06-21 15:14:49</sys_updated_on>
+        <sys_updated_on>2021-06-22 14:28:49</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>
