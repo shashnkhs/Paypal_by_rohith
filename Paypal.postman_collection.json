@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "b0b035e1-f8cf-48bf-951c-669ac967c1d6",
+		"name": "Paypal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "EN9tHGjnTPqFYXWG3DEgNCf-j3wD8BEz9WoZoANGm_Vj1cuXcXN3c5bQU8xx6b6LSVe_SsDdbqBOr8JD",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Acgwq_02kEHx56in4EAxZl4SwaH4xv-WEyj71fUcE7N395TViMbIK66PVzLe1y0_aIXUUati944HNYMm",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en_US",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic AS3KH_CKgXG0yhDgfVSDQZtniZfLlwkZa-nXTzamiajU44VvhXlutVHdUAgf8GLIG8OWxqzLvEHAIE-U:EAAMUxvYxyb2YhtmCdQ5eSuo_WjG819y3UPZmfHBnAqPOeyk61Kup97aJ1aSvMug0MAP3tWOVKlYzVii",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api-m.sandbox.paypal.com/v1/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"api-m",
+						"sandbox",
+						"paypal",
+						"com"
+					],
+					"path": [
+						"v1",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make Payment",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer A21AAK-VDNrl_zQ-H9A060CNT_74EWi_2dkt9a0XrQ8ZCNC_EYNUehUmoB8s6F5kLquX4QnKcTsbqFfYvARYAGDmecgl6_lsQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"intent\": \"sale\",\n  \"payer\": {\n    \"payment_method\": \"paypal\"\n  },\n  \"transactions\": [{\n    \"amount\": {\n      \"total\": \"500.00\",\n      \"currency\": \"USD\",\n      \"details\": {\n        \"subtotal\": \"500.00\",\n        \"tax\": \"0.00\",\n        \"shipping\": \"0.00\",\n        \"handling_fee\": \"0.00\",\n        \"shipping_discount\": \"0.00\",\n        \"insurance\": \"0.00\"\n      }\n    },\n    \"description\": \"This is the payment transaction description.\",\n    \"custom\": \"EBAY_EMS_90048630024435\",\n    \"invoice_number\": \"48787589673\",\n    \"payment_options\": {\n      \"allowed_payment_method\": \"INSTANT_FUNDING_SOURCE\"\n    },\n    \"soft_descriptor\": \"ECHI5786786\",\n    \"item_list\": {\n      \"items\": [{\n        \"name\": \"hat\",\n        \"description\": \"Brown color hat\",\n        \"quantity\": \"5\",\n        \"price\": \"100\",\n        \"tax\": \"0.00\",\n        \"sku\": \"1\",\n        \"currency\": \"USD\"\n      }],\n      \"shipping_address\": {\n        \"recipient_name\": \"Hello World\",\n        \"line1\": \"4thFloor\",\n        \"line2\": \"unit#34\",\n        \"city\": \"SAn Jose\",\n        \"country_code\": \"US\",\n        \"postal_code\": \"95131\",\n        \"phone\": \"011862212345678\",\n        \"state\": \"CA\"\n      }\n    }\n  }],\n  \"note_to_payer\": \"Contact us for any questions on your order.\",\n  \"redirect_urls\": {\n    \"return_url\": \"https://dev110521.service-now.com/sp\",\n    \"cancel_url\": \"https://example.com\"\n  }\n}"
+				},
+				"url": {
+					"raw": "https://api-m.sandbox.paypal.com/v1/payments/payment",
+					"protocol": "https",
+					"host": [
+						"api-m",
+						"sandbox",
+						"paypal",
+						"com"
+					],
+					"path": [
+						"v1",
+						"payments",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer A21AALn3c_uiJ3Iweh_ZW9kPKh7ZF9ra8glx1guRyJl3nIAq7nQ30UoP_R1YLETniedywV_KhlPmxxKDGvJ5nwlnRepXw3I2g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payer_id\": \"E4GAUKWKNV3JQ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-MDIFLTQ8B2774560K4635828/execute",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sandbox",
+						"paypal",
+						"com"
+					],
+					"path": [
+						"v1",
+						"payments",
+						"payment",
+						"PAYID-MDIFLTQ8B2774560K4635828",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
