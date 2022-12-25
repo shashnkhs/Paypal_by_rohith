@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_js_include">
+    <sp_js_include action="INSERT_OR_UPDATE">
+        <display_name>https://www.paypal.com/sdk/js?client-id=AZyW3vdZL9AeMg2Q2Lj08bMI5sMi7l9DLAXXziaUKsNxQ2nVtQVvaszKgX-2NKeU_tO2262I2_osf498</display_name>
+        <source>url</source>
+        <sys_class_name>sp_js_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-31 06:16:46</sys_created_on>
+        <sys_id>c1217d3e1bfe5110c114fcc8cc4bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>https://www.paypal.com/sdk/js?client-id=AZyW3vdZL9AeMg2Q2Lj08bMI5sMi7l9DLAXXziaUKsNxQ2nVtQVvaszKgX-2NKeU_tO2262I2_osf498</sys_name>
+        <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
+        <sys_ui_script/>
+        <sys_update_name>sp_js_include_c1217d3e1bfe5110c114fcc8cc4bcbdd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-31 06:16:46</sys_updated_on>
+        <url>https://www.paypal.com/sdk/js?client-id=AZyW3vdZL9AeMg2Q2Lj08bMI5sMi7l9DLAXXziaUKsNxQ2nVtQVvaszKgX-2NKeU_tO2262I2_osf498</url>
+    </sp_js_include>
+</record_update>

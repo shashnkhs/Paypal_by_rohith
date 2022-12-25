@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_dependency_js_include">
+    <m2m_sp_dependency_js_include action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sp_dependency display_value="Paypal">e801f93e1bfe5110c114fcc8cc4bcbd8</sp_dependency>
+        <sp_js_include display_value="https://www.paypal.com/sdk/js?client-id=AWD1yVg9SZ34WclCyoynYA-Uye8VJ46Pfh7UbBOnJdgtKdidrTv4bVc9LGigqW7xperowhXn3Yg1CK8U">5c9cafd31b321110c114fcc8cc4bcbff</sp_js_include>
+        <sys_class_name>m2m_sp_dependency_js_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-02 04:26:12</sys_created_on>
+        <sys_id>60dd63571b321110c114fcc8cc4bcb4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Paypal.https://www.paypal.com/sdk/js?client-id=ASYFpk9_jjdh3bNYpTPYkxHN5-nHZabxGq6rJ1Qj3C7ymDBfVi_So1EIruhNMbZVQx_FjlyMpE6q_guM</sys_name>
+        <sys_package display_value="Hospital Management" source="x_26525_hospital">8879b3691b683010978fc843604bcb91</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hospital Management">8879b3691b683010978fc843604bcb91</sys_scope>
+        <sys_update_name>m2m_sp_dependency_js_include_60dd63571b321110c114fcc8cc4bcb4a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-02 04:26:12</sys_updated_on>
+    </m2m_sp_dependency_js_include>
+</record_update>
